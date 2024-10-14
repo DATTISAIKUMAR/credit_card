@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+  body{
+    background-image: url('/static/credit.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #000100;
+  }
+  .container {
+    padding: 20px;
+    max-width: 350px;
+    margin-left: 540px;
+    margin-bottom: 200px;
+    background-color: #47585837;
+    max-height: 950px;
+
+  }
+
+  /* Style for the login form */
+  .login-form {
+    margin-top: 30px;
+  }
+
+  /* Style for form inputs and button */
+  input[type="text"],
+  input[type="password"],
+  button {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: medium;
+  }
+
+
+  h1 {
+    display: block;
+    font-size: 1.9em;
+    font-weight: bold;
+    margin-left: 650px;
+    color: aliceblue;
+    margin-top: 220px;
+    color: white;
+    margin-top: 100px;
+
+}
+
+label {
+    cursor: default;
+    font-size: large;
+}
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 70px;
+    margin-left: 150px;
+  }
+
+  button:hover {
+    background-color: #39e842;
+  }
+
+  /* Style for the "Register Here" link */
+  .register-link {
+    text-align: center;
+    margin-top: 10px;
+
+  }
+
+  .register-link a {
+    color: #f6f5f8;
+    text-decoration: none;
+
+  }
+
+  .register-link a:hover {
+    text-decoration: underline;
+    color: rgb(0, 157, 255);
+  }
+</style>
+</head>
+<body>
+  <h1> User Login</h1>
+<!-- Container div -->
+
+<div class="container">
+
+  <!-- Content goes here -->
+
+
+  <form class="login-form" method="post" action="/login">
+    <h6>{{ msg }}</h6>
+    <label for="username">Email:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your email" required><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+    <button type="submit">Login</button>
+  </form>
+  <!-- Register link -->
+  <div class="register-link">
+    <p>Don't have an account? <a href="{{ url_for('register') }}">Register Here</a></p>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+        body {
+            background-image: url('/static/download (1).jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .card-container {
+            width: 450px;
+            height: 250px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #5A98F2, #4353E0);
+            padding: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+
+        }
+
+        .static-label {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .credit-card-label {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .card-holder-name {
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .card-number {
+            position: absolute;
+            top: 110px;
+            left: 20px;
+            width: 90%;
+            font-size: 22px;
+            letter-spacing: 4px;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+            background-color: #e0e0e0;
+            color: #000;
+
+        }
+
+        .expiry-section {
+            position: absolute;
+            bottom: 15px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .valid-text {
+            font-size: 12px;
+            margin-right: 5px;
+        }
+
+        .expiry-date {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .chip {
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            width: 40px;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 5px;
+        }
+
+        .contactless-symbol {
+            position: absolute;
+            bottom: 60px;
+            right: 30px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .submit-btn {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        .credit{
+
+            padding-left:100px;
+
+        }
+        .let{
+        padding-left:50px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="card-container">
+    <div class="static-label">India</div>
+    <div class="credit-card-label">CREDIT CARD</div>
+
+    <div class="chip"></div>
+
+    <div class="card-holder-name" id="card-holder">Your Name</div><br><br><br>
+
+    <div class="credit">
+
+    <h2>Credit Card Fraud Prediction</h2>
+    <h3 class="let">Let's Test Your Credit</h3>
+    </div>
+
+    <div class="expiry-section">
+        <div class="valid-text">Valid Thru</div>
+        <div class="expiry-date">06/2025</div>
+    </div>
+    <div class="contactless-symbol">&#12642;&#12642;&#12642;</div>
+    <a href="{{url_for('main_page')}}">
+        <button class="submit-btn">Start Test</button>
+    </a>
+
+</div>
+
+
+</body>
+</html>

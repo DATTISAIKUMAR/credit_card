@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>main_page</title>
+    <link rel="stylesheet" href="\static\css.css" />
+      <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+    body {
+      background-image: url('/static/credit.webp');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+
+    }
+    .input-container {
+      margin-left:300px;
+      background-color: rgba(255, 255, 255, 0.53);
+      backdrop-filter: blur(4px);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      width: 600px;
+    }
+          .margin{
+          margin-left:600px;
+          }
+
+
+
+</style>
+  </head>
+  <body>
+    <div class="head">
+      <h1>
+          Credit Card Fraud Prediction
+      </h1>
+        <div class="margin">
+        <a href="{{ url_for('data') }}" class="data">     data            </a>||<a href="{{ url_for('clean_data') }}" class="clean">   clean data             </a>||<a href="{{ url_for('accuracy') }}" class="accuracy">           accuracy           </a>||<a href="{{ url_for('Data_Analytics') }}" class="da">        Data Analytics           </a>||<a href="{{ url_for('prediction') }}" class="pre">    Prediction values            </a>
+        </div>
+    </div>
+
+
+    <div class="input-container">
+       <form method="post" action="/main_page">
+           <label> Time:   </label>
+           <input type="text" name="time" placeholder="enter the scale time" required><br><br>
+           <label> Amount :   </label>
+           <input type="text" name="amount" placeholder="enter the amount" required><br><br>
+           <label> Valid Thru :   </label>
+           <input type="text" name="v" placeholder="enter the valid thru(V)" required><br><br>
+
+           <label>model :   </label>
+           <select name="model">
+                <option value="rfc">RandomForestClassifier</option>
+                <option value="gbc">GradientBoostingClassifier</option>
+               <option value="dt">DecisionTreeClassifier</option>
+               <option value="knn">KNeighborsClassifier</option>
+               <option value="svm">SVM</option>
+               <option value="lr">LogisticRegression</option>
+            </select><br><br>
+
+
+        <button class="button"><h4>submit</h4></button>
+        </form>
+        <p class="pre1"> {{ prediction }}</p>
+
+
+
+    </div>
+
+  </body>
+</html>

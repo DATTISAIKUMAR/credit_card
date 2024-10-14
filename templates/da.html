@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Main Page</title>
+    <link rel="stylesheet" href="\static\css.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+    body {
+      background-image: url('/static/images (2).jpeg');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+
+    }
+        .margin{
+          margin-left:600px;
+          }
+
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <h1>
+        Credit Card Fraud Prediction
+      </h1>
+      <div class="margin">
+        <a href="{{ url_for('home') }}" class="da">        Home           </a>||<a href="{{ url_for('data') }}" class="data">     data            </a>||<a href="{{ url_for('clean_data') }}" class="clean">   clean data             </a>||<a href="{{ url_for('accuracy') }}" class="accuracy">           accuracy           </a>||<a href="{{ url_for('prediction') }}" class="pre">    Prediction values            </a>
+        </div>
+    </div>
+
+
+    <div>
+      <img src="{{ url_for('static', filename='Data images/1.png') }}" style="height:400px;width:600px;">
+      <img src="{{ url_for('static', filename='Data images/3.png') }}" class="said" style="height:400px;width:600px;">
+    </div>
+    <div>
+      <img src="{{ url_for('static', filename='Data images/5.png') }}" style="height:400px;width:600px;">
+      <img src="{{ url_for('static', filename='Data images/4.png') }}" class="said" style="height:400px;width:600px;">
+    </div>
+
+    <img src="{{ url_for('static', filename='Data images/2.png') }}" style="height:400px;width:1250px;">
+
+
+  </body>
+</html>

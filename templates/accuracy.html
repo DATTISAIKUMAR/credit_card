@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>main_page</title>
+    <link rel="stylesheet" href="\static\css.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+    body {
+      background-image: url('/static/download.jpeg');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+
+    }
+    .input-container{
+    color:white;
+    }
+
+
+        .margin{
+          margin-left:600px;
+          }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <h1>
+         Credit Card Fraud Prediction
+      </h1>
+      <div class="margin">
+        <a href="{{ url_for('home') }}" class="da">        Home           </a>||<a href="{{ url_for('data') }}" class="data">     data            </a>||<a href="{{ url_for('clean_data') }}" class="accuracy">           clean data          </a>||<a href="{{ url_for('Data_Analytics') }}" class="da">        Data Analytics           </a>||<a href="{{ url_for('prediction') }}" class="pre">    Prediction values            </a>
+        </div>
+    </div>
+
+  <div class="input-container">
+    <h4>Accuracy of the model:</h4>
+     <h6>{{r2_score}}</h6>
+    </div>
+  <div>
+      <img src="{{ url_for('static', filename='accuracy/dt.png') }}" style="height:400px;width:600px;">
+      <img src="{{ url_for('static', filename='accuracy/gbc.png') }}" class="said" style="height:400px;width:600px;">
+    </div>
+  <div>
+      <img src="{{ url_for('static', filename='accuracy/knn.png') }}" style="height:400px;width:600px;">
+      <img src="{{ url_for('static', filename='accuracy/lr.png') }}" class="said" style="height:400px;width:600px;">
+    </div>
+  <div>
+      <img src="{{ url_for('static', filename='accuracy/rfc.png') }}" style="height:400px;width:600px;">
+      <img src="{{ url_for('static', filename='accuracy/svm.png') }}" class="said" style="height:400px;width:600px;">
+    </div>
+  </body>
+</html>
